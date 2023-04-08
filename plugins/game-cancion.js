@@ -6,22 +6,22 @@ let handler = async (m, { conn, usedPrefix }) => {
 conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
 let id = m.chat
 if (id in conn.tebaklagu) {
-conn.reply(m.chat, 'Todavía hay canciones sin respuesta en este chat.', conn.tebaklagu[id][0])
+conn.reply(m.chat, 'Não tente me passar a perna, ainda tem música que tu não deu o nome! Eu hein', conn.tebaklagu[id][0])
 throw false
 } //5LTV57azwaid7dXfz5fzJu
 let res = await fetchJson(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/tebaklagu.json`)
 let json = res[Math.floor(Math.random() * res.length)]    
 let caption = `
-ADIVINA EL TITULO DE LA CANCION
-Tiempo ${(timeout / 1000).toFixed(2)} segundos
-Escribe *${usedPrefix}pista* Para obtener una pista
-Premio: ${poin} XP
-RESPONDE A ESTE MENSAJE CON LAS RESPUESTAS!`.trim()
+ADIVINHE O NOME DA MÚSICA
+Tempo ${(timeout / 1000).toFixed(2)} segundos
+Escreva: *${usedPrefix}dica* para conseguir uma dica
+Prêmio: ${poin} XP
+RESPONDA ESSA MENSAGEM COM A RESPOSTA!`.trim()
 conn.tebaklagu[id] = [
 await m.reply(caption),
 json, poin,
 setTimeout(() => {
-if (conn.tebaklagu[id]) conn.reply(m.chat, `Se acabó el tiempo!\nLa respuesta es ${json.jawaban}`, conn.tebaklagu[id][0])
+if (conn.tebaklagu[id]) conn.reply(m.chat, `O tempo acabou, incompetente!\nA resposta é ${json.jawaban}`, conn.tebaklagu[id][0])
 delete conn.tebaklagu[id]
 }, timeout)
 ]
@@ -30,7 +30,7 @@ if (!aa) return conn.sendFile(m.chat, json.link_song, 'coba-lagi.mp3', '', m)
 }
 handler.help = ['tebaklagu']
 handler.tags = ['game']
-handler.command = /^cancion|canción$/i
+handler.command = /^qualmusica|canción$/i
 export default handler
 async function fetchJson(url, options) {
 try {

@@ -2,17 +2,17 @@ import axios from 'axios'
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 𝙳𝙴 𝚄𝙽 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 𝙳𝙴 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command} luisitocomunica*`
+if (!args[0]) throw `*[❗𝐈𝐍𝐅𝐎❗] MANDA O NOME DE ALGUEM DO INSTA (NÃO FUNCIONA EM CONTA PRIVADA): ${usedPrefix + command} suuycidio*`
 let res = await igstalk(args[0].replace(/^@/, ''))
 let res2 = await fetch(`https://api.lolhuman.xyz/api/stalkig/${args[0].replace(/^@/, '')}?apikey=${lolkeysapi}`)
 let res3 = await res2.json()
 let json = JSON.parse(JSON.stringify(res))
 let iggs = `
-▢ *Username:* ${json.username}
-▢ *Nickname:* ${json.fullname}
-▢ *Followers:* ${json.followers}
-▢ *Following:* ${json.following}
-▢ *Posting:* ${json.post}
+▢ *User:* ${json.username}
+▢ *Nome:* ${json.fullname}
+▢ *Seguidores:* ${json.followers}
+▢ *Seguindo:* ${json.following}
+▢ *Posts:* ${json.post}
 ▢ *Link:* https://instagram.com/${json.username.replace(/^@/, '')}
 ▢ *Bio:* ${json.bio}`.trim() 
 let aa = `${res3.result.photo_profile || res.profile}`

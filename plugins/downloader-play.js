@@ -34,16 +34,16 @@ function secondString(seconds) {
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   if (!text)
-    throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾 𝙳𝙴 𝚄𝙽𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${
+    throw `*[❗𝐈𝐍𝐅𝐎❗] O NOME DA MÚSICA OU SEI LÁ OQ ESTÁ FALTANDO*\n\n*—◉ EXEMPLO:*\n*${
       usedPrefix + command
-    } Good Feeling - Flo Rida*`;
+    } Hopedrunk Everasking - Caroline Polachek*`;
   try {
     const yt_play = await search(args.join(" "));
     let texto1 = `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
 ❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${yt_play[0].title}
 ❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${yt_play[0].ago}
-❏ ⌚ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${secondString(yt_play[0].duration.seconds)}
-❏ 👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${`${MilesNumber(yt_play[0].views)}`}
+❏ ⌚ *DURAÇÃO:* ${secondString(yt_play[0].duration.seconds)}
+❏ 👀 *𝚅IEWS:* ${`${MilesNumber(yt_play[0].views)}`}
 ❏ 👤 *𝙰𝚄𝚃𝙾𝚁:* ${yt_play[0].author.name}
 ❏ ⏯️ *𝙲𝙰𝙽𝙰𝙻:* ${yt_play[0].author.url}
 ❏ 🆔 *𝙸𝙳:* ${yt_play[0].videoId}
@@ -62,13 +62,13 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
       },
       {
         buttonId: `#playlist ${text}`,
-        buttonText: { displayText: "📋 𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋" },
+        buttonText: { displayText: "📋 MAIS 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋" },
         type: 1,
       },
     ];
     let buttonMessage = {
-      document: { url: "https://wa.me/5219992095479" },
-      fileName: "❏ 🌿 ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ",
+      document: { url: "https://wa.me/5531983738317" },
+      fileName: "❏ 🌿 artpop bot, a falcatrua",
       mimetype: "application/vnd.ms-excel",
       caption: texto1,
       fileLength: "99999999999999",
@@ -85,7 +85,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
           previewType: "VIDEO",
           thumbnailUrl: yt_play[0].image,
           mediaUrl: `${yt_play[0].url}`,
-          sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`,
+          sourceUrl: `https://www.youtube.com/watch?v=Eki_I2VhFDY`,
         },
       },
     };
@@ -105,18 +105,18 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
       );
       let jsonn = await ytLink.json();
       let aud = await jsonn.result.audio;
-      let capt = `❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}\n❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${published}\n❏ 👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${views}\n❏ 🔗 *𝙻𝙸𝙽𝙺:* ${url}`;
+      let capt = `❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}\n❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${published}\n❏ 👀 *𝚅IEWS:* ${views}\n❏ 🔗 *𝙻𝙸𝙽𝙺:* ${url}`;
       const buttons = [
         {
           buttonId: `#playlist ${title}`,
-          buttonText: { displayText: "📋 𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋" },
+          buttonText: { displayText: "📋 MAIS 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋" },
           type: 1,
         },
       ];
       const buttonMessage = {
         image: { url: thumbnail },
         caption: capt,
-        footer: "*ᴇɴᴠɪᴀɴᴅᴏ ᴀᴜᴅɪᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*",
+        footer: "*ENIANDO, ESPERA AI*",
         buttons: buttons,
         headerType: 4,
       };
@@ -132,7 +132,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
         { quoted: msg }
       );
     } catch {
-      throw "*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*";
+      throw "*[❗𝐈𝐍𝐅𝐎❗] ERRO, TENTA DNV PFV*";
     }
   }
 };

@@ -9,5 +9,5 @@ let nya = json.jawaban
 let nyanya = nya.replace(/[bcdfghjklmnñpqrstvwxyzBCDEFGHJKLMNÑPQRSTVWXYZ]/g, '_')
 m.reply('' + nyanya + '')
 }
-handler.command = /^hint|pista$/i
+handler.command = /^dica|pista$/i
 export default handler

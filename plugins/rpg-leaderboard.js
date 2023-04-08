@@ -9,24 +9,24 @@ let usersLim = sortedLim.map(enumGetKey)
 let usersLevel = sortedLevel.map(enumGetKey)
 let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(5, sortedExp.length)
 let text = `
-*< TABLA DE CLASIFICACION />*
+*< OS MAIS BABADEIROS, OS MELHORES/>*
     
 ▢ *TOP ${len} XP* •
-Tú : *${usersExp.indexOf(m.sender) + 1}* de *${usersExp.length}*
+VOCÊ: *${usersExp.indexOf(m.sender) + 1}* de *${usersExp.length}*
 
-${sortedExp.slice(0, len).map(({ jid, exp }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${exp} Exp*`).join`\n`}
+${sortedExp.slice(0, len).map(({ jid, exp }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)})` : '@'}${jid.split`@`[0]} *${exp} Exp*`).join`\n`}
 
 ▢ *TOP ${len} DIAMANTES💎* •
-Tú : *${usersLim.indexOf(m.sender) + 1}* de *${usersLim.length}*
+VOCÊ: *${usersLim.indexOf(m.sender) + 1}* de *${usersLim.length}*
 
-${sortedLim.slice(0, len).map(({ jid, limit }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${limit} Diamantes*`).join`\n`}
+${sortedLim.slice(0, len).map(({ jid, limit }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)})` : '@'}${jid.split`@`[0]} *${limit} Diamantes*`).join`\n`}
 
 ▢ *TOP ${len} NIVEL* • 
-Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length}*
+VOCÊ: *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length}*
 
-${sortedLevel.slice(0, len).map(({ jid, level }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *Nivel ${level}*`).join`\n`}
+${sortedLevel.slice(0, len).map(({ jid, level }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)})` : '@'}${jid.split`@`[0]} *Nivel ${level}*`).join`\n`}
 
-_Diseño By FG_`.trim()
+_A FALCATRUA_`.trim()
   m.reply(text, null, { mentions: conn.parseMention(text) })
 }
 handler.help = ['top']

@@ -3,15 +3,15 @@ const items = [
 ]
 let confirmation = {}
 async function handler(m, { conn, args, usedPrefix, command }) {
-    if (confirmation[m.sender]) return m.reply('estas haciendo una transferencia')
+    if (confirmation[m.sender]) return m.reply('ESTÁ FAZENDO UMA TRANSFERÊNCIA')
     let user = global.db.data.users[m.sender]
     const item = items.filter(v => v in user && typeof user[v] == 'number')
-    let lol = `✳️ Uso del comamdo 
-*${usedPrefix + command}*  [tipo] [cantidad] [@user]
-📌 Ejemplo : ${usedPrefix + command} exp 65 @59172945992
+    let lol = `✳️ Uso do comando
+*${usedPrefix + command}*  [tipo] [quantidade] [@user]
+📌 Exemplo: ${usedPrefix + command} exp 65 @59172945992
 
 
-📍 Artículos transferibles
+📍 ITENS TRANSFERIVEIS
 ┌──────────────
 ▢ *limit* = diamante
 ▢ *exp* = experiencia
@@ -22,22 +22,22 @@ async function handler(m, { conn, args, usedPrefix, command }) {
     const count = Math.min(Number.MAX_SAFE_INTEGER, Math.max(1, (isNumber(args[1]) ? parseInt(args[1]) : 1))) * 1
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : args[2] ? (args[2].replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : ''
     if (!who) return m.reply('✳️ Taguea al usuario')
-    if (!(who in global.db.data.users)) return m.reply(`✳️ Usuario ${who} no está en la  database`)
+    if (!(who in global.db.data.users)) return m.reply(`✳️ Usuario ${who} não está em nossa base de dados`)
     if (user[type] * 1 < count) return m.reply(`✳️  *${type}*  insuficiente para transferir`)
     let confirm = `
-¿Está seguro de que desea transferir *${count}* ${type} a  *@${(who || '').replace(/@s\.whatsapp\.net/g, '')}* ? 
+Tem certeza que quer doar seus bens para esse pobretão? *${count}* ${type} a  *@${(who || '').replace(/@s\.whatsapp\.net/g, '')}* ? 
 
-Tienes  *60* s
+Tem *60* segundos
 `.trim()
-    let c = 'FG - dylux-bot'
-    conn.sendButton(m.chat, confirm, c, null, [['si'], ['no']], m, { mentions: [who] })
+    let c = 'CHOCADO'
+    conn.sendButton(m.chat, confirm, c, null, [['sim'], ['não']], m, { mentions: [who] })
     confirmation[m.sender] = {
         sender: m.sender,
         to: who,
         message: m,
         type,
         count,
-        timeout: setTimeout(() => (m.reply('Se acabó el tiempo'), delete confirmation[m.sender]), 60 * 1000)
+        timeout: setTimeout(() => (m.reply('ACABOU O TEMPO'), delete confirmation[m.sender]), 60 * 1000)
     }
 }
 
@@ -59,11 +59,11 @@ handler.before = async m => {
         let _previous = _user[type] * 1
         user[type] -= count * 1
         _user[type] += count * 1
-        if (previous > user[type] * 1 && _previous < _user[type] * 1) m.reply(`✅ transferencia exitosa de \n\n*${count}* *${type}*  a @${(to || '').replace(/@s\.whatsapp\.net/g, '')}`, null, { mentions: [to] })
+        if (previous > user[type] * 1 && _previous < _user[type] * 1) m.reply(`✅ transferencia feita com sucesso \n\n*${count}* *${type}*  a @${(to || '').replace(/@s\.whatsapp\.net/g, '')}`, null, { mentions: [to] })
         else {
             user[type] = previous
             _user[type] = _previous
-            m.reply(`Error al transferir *${count}* ${type} to *@${(to || '').replace(/@s\.whatsapp\.net/g, '')}*`, null, { mentions: [to] })
+            m.reply(`Erro em transferir *${count}* ${type} para *@${(to || '').replace(/@s\.whatsapp\.net/g, '')}*`, null, { mentions: [to] })
         }
         clearTimeout(timeout)
         delete confirmation[sender]

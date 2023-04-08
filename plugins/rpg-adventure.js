@@ -13,25 +13,25 @@ let imgr = flaaa.getRandom()
 let user = global.db.data.users[m.sender]
 let timers = (cooldown - (new Date - user.lastadventure))
 
-if (user.health < 80) return conn.sendButton(m.chat,`${htki} 𝙱𝙰𝙹𝙰 𝚂𝙰𝙻𝚄𝙳 ${htka}`,
-`𝚃𝚄 𝚂𝙰𝙻𝚄𝙳 💔 𝙴𝚂𝚃𝙰 𝙿𝙾𝚁 𝙳𝙴𝙱𝙰𝙹𝙾 𝙳𝙴 *80!!*
-𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙲𝚄𝚁𝙰𝚃𝙴 𝙿𝚁𝙸𝙼𝙴𝚁𝙾 𝙿𝙰𝚁𝙰 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰𝚁 𝙳𝙴 𝙽𝚄𝙴𝚅𝙾`.trim(), imgr + 'MALA SALUD', [
-[`❤️ 𝙲𝚄𝚁𝙰𝙼𝙴`, `${usedPrefix}heal`]], fkontak, m)
+if (user.health < 80) return conn.sendButton(m.chat,`${htki} BAIXA SAÚDE!!! ${htka}`,
+`SUA SAÚDE 💔 ESTÁ ABAIXO DE *80!!*
+𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙲𝚄𝚁𝙰𝚃𝙴 𝙿𝚁𝙸𝙼𝙴𝚁𝙾 𝙿𝙰𝚁𝙰 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰𝚁 𝙳𝙴 𝙽𝚄𝙴𝚅𝙾`.trim(), imgr + 'DODÓI', [
+[`❤️ CURAR`, `${usedPrefix}heal`]], fkontak, m)
     
 if (new Date - user.lastadventure <= cooldown) return conn.sendButton(m.chat, `${htki} 𝙳𝙴𝚂𝙲𝙰𝙽𝚂𝙰𝙽𝙳𝙾 ${htka}`,
-`𝚈𝙰 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰𝚂𝚃𝙴 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙴𝚂𝙿𝙴𝚁𝙰 𝙷𝙰𝚂𝚃𝙰 𝚀𝚄𝙴 𝚃𝙴𝚁𝙼𝙸𝙽𝙴 𝙴𝙻 𝚃𝙸𝙴𝙼𝙿𝙾 𝙳𝙴 𝙳𝙴𝚂𝙲𝙰𝙽𝚂𝙾
+`ESPERE UM POUCO ANTES DE SE AVENTURAR NOVAMENTE...
 
 ⏱️ ${timers.toTimeString()}`.trim(), imgr + 'DESCANSANDO', [
-[`🔔 𝚁𝙴𝙲𝙻𝙰𝙼𝙾 𝙳𝙸𝙰𝚁𝙸𝙾`, `${usedPrefix}daily`]], fkontak, m) 
+[`🔔 DAILY CLAIM`, `${usedPrefix}daily`]], fkontak, m) 
     
 const rewards = reward(user)
-let text = `🛫 𝙴𝚂𝚃𝙰𝚂 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰𝙽𝙳𝙾 𝙴𝙽  *» ${kt[1][0].name}*
+let text = `🛫 ESTÁ SE AVENTURANDO EM  *» ${kt[1][0].name}*
 
 ${cmenut}
 ${cmenub} *ID:* ${kt[1][0].id}
-${cmenub} *CIUDAD:* ${kt[1][0].capitalCity}
-${cmenub} *LONGITUD:* ${kt[1][0].longitude}
-${cmenub} *LATITUD:* ${kt[1][0].latitude}
+${cmenub} *CIDADE:* ${kt[1][0].capitalCity}
+${cmenub} *LONGITUDE:* ${kt[1][0].longitude}
+${cmenub} *LATITUDE:* ${kt[1][0].latitude}
 ${cmenuf}
 
 🏞️ 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰 𝙵𝙸𝙽𝙰𝙻𝙸𝚉𝙰𝙳𝙰
@@ -42,7 +42,7 @@ const total = rewards.lost[lost].getRandom()
 user[lost] -= total * 1
 if (total) text += `\n${global.rpg.emoticon(lost)} ${total}`
  }
-text += '\n\n✨ 𝚁𝙴𝙲𝙾𝙼𝙿𝙴𝚂𝙰𝚂 𝙳𝙴 𝙻𝙰 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰'
+text += '\n\n✨ RECOMPENSAS DE SUA AVENTURA'
 for (const rewardItem in rewards.reward) if (rewardItem in user) {
 const total = rewards.reward[rewardItem].getRandom()
 user[rewardItem] += total * 1
@@ -50,13 +50,13 @@ if (total) text += `\n» ${global.rpg.emoticon(rewardItem)} ${total}`
  }
 conn.sendButton(m.chat, 
 `${htki} 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰 ${htka}`, 
-text.trim(), `https://static-maps.yandex.ru/1.x/?lang=id-ID&ll=${kt[1][0].longitude},${kt[1][0].latitude}&z=12&l=map&size=600,300`, [
+text.trim(), `https://static-maps.yandex.ru/1.x/?lang=pt-ID&ll=${kt[1][0].longitude},${kt[1][0].latitude}&z=12&l=map&size=600,300`, [
 [`🎒 𝙸𝙽𝚅𝙴𝙽𝚃𝙰𝚁𝙸𝙾`, `${usedPrefix}inventory`],
-[`🔔 𝚁𝙴𝙲𝙻𝙰𝙼𝙾 𝙳𝙸𝙰𝚁𝙸𝙾`, `${usedPrefix}daily`]], fkontak, m)
+[`🔔 DAILY CLAIM`, `${usedPrefix}daily`]], fkontak, m)
 user.lastadventure = new Date * 1
 }
 catch {
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁, 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙻𝙾 𝙳𝙴 𝙽𝚄𝙴𝚅𝙾, 𝚂𝙴𝙶𝚄𝚁𝙾 𝙻𝙰 𝙰𝙿𝙸 𝙽𝙾 𝙶𝙴𝙽𝙴𝚁𝙾 𝙻𝙰 𝙸𝙼𝙰𝙶𝙴𝙽*', m)
+conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] OPS, DEU UM ERRO! TENTE DE NOVO, tenho certeza que a porra da api deu problema.*', m)
 }}
 handler.help = ['adventure']
 handler.tags = ['rpg']

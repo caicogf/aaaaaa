@@ -4,10 +4,10 @@ let res = await fetch(`https://api.lolhuman.xyz/api/random/ppcouple?apikey=${lol
 if (res.status != 200) throw await res.text()
 let json = await res.json()
 if (!json.status) throw json
-conn.sendButton(m.chat, '𝙲𝙷𝙸𝙲𝙰 𝙲𝚄𝚃𝙴', wm, json.result.female, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], m)
-conn.sendButton(m.chat, '𝙲𝙷𝙸𝙲𝙾 𝙲𝚄𝚃𝙴', wm, json.result.male, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], m)
+conn.sendButton(m.chat, 'FÊMEA TONHONA', wm, json.result.female, [['🔄 PRÓXIMO 🔄', `/${command}`]], m)
+conn.sendButton(m.chat, 'MACHO TONHÃO', wm, json.result.male, [['🔄 PRÓXIMO 🔄', `/${command}`]], m)
 }
 handler.help = ['ppcouple']
 handler.tags = ['internet']
-handler.command = /^(ppcp|ppcouple)$/i
+handler.command = /^(metadinha)$/i
 export default handler

@@ -10,7 +10,7 @@ let isSurrender = !1
 this.game = this.game ? this.game : {}
 let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
 if (room) {
-if (!/^([1-9]|(me)?nyerah|\rendirse\|rendirse|RENDIRSE|surr?ender)$/i.test(m.text)) 
+if (!/^([1-9]|(me)?nyerah|\rendirse\|rendirse|desistir|RENDIRSE|surr?ender)$/i.test(m.text)) 
 return !0
 isSurrender = !/^[1-9]$/.test(m.text)
 if (m.sender !== room.game.currentTurn) { 
@@ -22,10 +22,10 @@ isSurrender,
 text: m.text }))
 if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
 m.reply({
-'-3': 'El juego ha terminado',
-'-2': 'Inválido',
-'-1': 'Posición inválida',
-0: 'Posición inválida',
+'-3': 'O JOGO TERMINOU, VISH...',
+'-2': 'INVÁLIDO, TONHAO',
+'-1': 'POSIÇÃO INVÁLIDA, ANIMAL COM TETAS',
+0: 'POSIÇÃO INVÁLIDA, QUADRUPEDE',
 }[ok])
 return !0 }
 if (m.sender === room.game.winner)
@@ -51,7 +51,7 @@ room.game._currentTurn = m.sender === room.game.playerX
 isWin = true }
 let winner = isSurrender ? room.game.currentTurn : room.game.winner
 let str = `
-🎮 𝐓𝐑𝐄𝐒 𝐄𝐍 𝐑𝐀𝐘𝐀 🎮
+🎮 JOGO DA VELHA 🎮
 
 ❎ = @${room.game.playerX.split('@')[0]}
 ⭕ = @${room.game.playerO.split('@')[0]}
@@ -60,7 +60,7 @@ let str = `
         ${arr.slice(3, 6).join('')}
         ${arr.slice(6).join('')}
 
-${isWin ? `@${(isSurrender ? room.game.currentTurn : room.game.winner).split('@')[0]} 𝙶𝙰𝙽𝙰𝚂𝚃𝙴 🥳, 𝚃𝙴 𝙻𝙻𝙴𝚅𝙰𝚂 +4999 𝚎𝚡𝚙` : isTie ? '𝙴𝙻 𝙹𝚄𝙴𝙶𝙾 𝚃𝙴𝚁𝙼𝙸𝙽𝙾 𝙴𝙽 𝙴𝙼𝙿𝙰𝚃𝙴 😐' : `𝚃𝚄𝚁𝙽𝙾 𝙳𝙴 @${room.game.currentTurn.split('@')[0]}`}
+${isWin ? `@${(isSurrender ? room.game.currentTurn : room.game.winner).split('@')[0]} GANHOUUUU, SEU PRÊMIO É DE +4999 𝚎𝚡𝚙` : isTie ? 'O JOGO DEU EMPATE, MDS... SE RESOLVAM NO SOCO ENTÃO 😐' : `TÁ NA VEZ DE @${room.game.currentTurn.split('@')[0]}`}
 `.trim()
 let users = global.db.data.users
 if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)

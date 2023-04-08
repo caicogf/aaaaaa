@@ -2,14 +2,14 @@
 let handler = async (m, { conn, isPrems}) => {
 let hasil = Math.floor(Math.random() * 5000)
 let time = global.db.data.users[m.sender].lastwork + 600000
-if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `*𝙴𝚜𝚝𝚊𝚜 𝚌𝚊𝚗𝚜𝚊𝚍𝚘, 𝚍𝚎𝚋𝚎𝚜 𝚍𝚎𝚜𝚌𝚊𝚗𝚜𝚊𝚛 𝚌𝚘𝚖𝚘 𝚖𝚒𝚗𝚒𝚖𝚘 ${msToTime(time - new Date())} 𝚙𝚊𝚛𝚊 𝚟𝚘𝚕𝚟𝚎𝚛 𝚊 𝚝𝚛𝚊𝚋𝚊𝚓𝚊𝚛!*`
+if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `*Você vive num sistema capitalista fudido, por isso está sempre cansado. Aguarde ${msToTime(time - new Date())} para voltar ao trabalho, aqui não temos acumulo de capital!*`
 
 m.reply(`${pickRandom(global.work)} *${hasil} XP*`)
 global.db.data.users[m.sender].lastwork = new Date * 1
 }
 handler.help = ['work']
 handler.tags = ['xp']
-handler.command = ['work', 'trabajar']
+handler.command = ['work', 'trabalhar']
 handler.fail = null
 handler.exp = 0
 export default handler
@@ -31,24 +31,24 @@ function pickRandom(list) {
 return list[Math.floor(list.length * Math.random())]
 }
 
-global.work = ["Trabajas como cortador de galletas y ganas", "Trabaja para una empresa militar privada, ganando", "Organiza un evento de cata de vinos y obtiene",
- "Te secuestran y te llevan a un coliseo subterráneo donde luchaste contra monstruos con personas que nunca antes habías conocido. Ganas", "Limpias la chimenea y encuentras", 
-"Desarrollas juegos para ganarte la vida y ganas", 
-"¿Por qué este comando se llama trabajo? Ni siquiera estás haciendo nada relacionado con el trabajo. Sin embargo, ganas", "Trabajaste en la oficina horas extras por", 
-"Trabajas como secuestrador de novias y ganas", 
-"Alguien vino y representó una obra de teatro. Por mirar te dieron", "Compraste y vendiste artículos y Ganaste", "Trabajas en el restaurante de la abuela como cocinera y ganas", 
-"Trabajas 10 minutos en un Pizza Hut local. Ganaste", 
-"Trabajas como escritor(a) de galletas de la fortuna y ganas", "Revisas tu bolso y decides vender algunos artículos inútiles que no necesitas. Resulta que toda esa basura valía", 
-"Ves a alguien luchando por subir una caja a su auto, te apresuras a ayudarlo antes de que se lastime. Después de ayudarlos, amablemente te dan", 
-"Desarrollas juegos para ganarte la vida y ganas", 
-"Ganas un concurso de comer chili picante. ¡El premio es", 
-"Trabajas todo el día en la empresa por", 
-"Ayudas a moderar el grupo de DyLux por", "Diseñaste un logo para *FG* por", 
-"Moderaste el grupo cuando *FG* no estaba, el pago fue", 
-"¡Trabajó lo mejor que pudo en una imprenta que estaba contratando y ganó su bien merecido!", 
-"Trabajas como podador de arbustos para *FG98* y ganas", "La demanda de juegos para dispositivos móviles ha aumentado, por lo que creas un nuevo juego lleno de micro-transacciones. Con tu nuevo juego ganas un total de", 
-"Trabajas como actor de voz para Bob Esponja y te las arreglaste para ganar", 
-"Estabas cultivando y Ganaste", "Trabajas como constructor de castillos de arena y ganas", "Trabajaste y Ganaste", 
-"Trabajas como artista callejera y ganas","¡Hiciste trabajo social por una buena causa! por tu buena causa Recibiste", 
-"Llevas mujeres a la tienda por"
+global.work = ["Você trabalha como funcionária da Karen bachini e ganha", "Você faz música ruim, nossa olivia rodrigo, ganhou", "Você organizou um evento podre, ganhou",
+ "Te sequestraram e agora você está em um lugar escuro, estão te obrigando a ouvir o album da taylor swift sem pausa, ganhou", "Você está promovendo albuns babadeiros, toma", 
+"Você é um nerdola e está jogando lol, ganha", 
+"Você é petista e quer ganhar xp sem trabalhar, toma", "Fez hora extra na pussy lanches corporation", 
+"Você está rodando bolsinha, cachorra! Tome", 
+"Você é tão feio que ficaram com dó, te deram", "Funcionário da pussy lanches, amo, tome", "Você é porpeta animador de festa, tome", 
+"Você é a J.K Rowling e escreveu a coisa mais porca, toma", 
+"Você é a Collen Hoover, e escreveu coisas horríveis, toma", "Você tinha uns lixos no bolso (album do harry styles), vendeu essa bomba e ganhou uns trocados.", 
+"Você é trambiqueiro, viado fajuto, espancou uma idosa na rua e roubou ela ainda, alguém prende essa beesha. Toma", 
+"Desenvolveu a cura gay, toma", 
+"Ganhou uma competição de resistência à música ruim, ouviu Olivia Rodrigo por horas e ganhou", 
+"Você trabalha na fiscalização da last fm, pode ir humilhando os charts alheios!! Toma", 
+"Fiscalização letterboxd, pode ir dropando o filme do ano (everything everywhere all at once), toma", "Desenhou uma coisa horrorosa e fingiu ser arte contemporanea, ganhou", 
+"Tão tonhão que ficaram com dó e te deram um trocado, tome", 
+"Você é fã de artistas e gay de charts, toma", 
+"VOCÊ VEIO DIRETAMENTE DE KWANGYA, IM GOING KWANGYARO GAME IN. toma", "Você assasinou a black mamba, saiu de kwangya e todos os divos my's te aplaudiram, tome", 
+"VOCÊ COLOCOU FELIPE NETO NA CADEIA, OS DIVOS DE DIREITA TE DERAM", 
+"Você achou na rua, toma", "EXPERIMENTAL DIVO FM @@@####@#@#@#$$$%%¨$ ganhou", "você é dona da wepink, a base perfeita, toma", 
+"Você fez o rap do zé felipe ret, eu peço respeito com a minha familia, com minhas maria, com minha virgina RESPEITA UMA MÃE, A MINHA MULER... deviar ter noçãwn e ganhou","Você foi figurante de um filme de qualidade mega duvidosa (terrifier) e ganhou uns trocados para não passar fome.", 
+"Ai, fiquei com dó de você, toma"
 ]

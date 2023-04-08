@@ -8,35 +8,23 @@ import axios from 'axios'
 import moment from 'moment-timezone' 
 
 global.owner = [
-  ['5219992095479', '👑 Mystic - Creador 👑', true],
-  ['50499698072', '💫 Mystic - Collaborator 1 💫', true],
-  ['51940617554', '💫 Mystic - Collaborator 2 💫', true],
-  ['51996089079', '💫 Mystic - Collaborator 3 💫', true],
-  ['525560066050', '💫 Mystic - Collaborator 4 💫', true],
-  ['50246028932', '💫 Mystic - Collaborator 5 💫', true],  
-  ['5212411719888', '💫 Mystic - Collaborator 6 💫', true],
-  ['5215533827255', '💫 Mystic - Collaborator 7 💫', false],
-  ['593968585283'],
-  ['5219993404349'],
-  ['584125778026'],
-  ['5219991402134'],	
-  ['5219996125657']
+  ['553183738317', 'caico baphudo', true]
 ] 
 
-global.suittag = ['5219993404349'] 
-global.prems = ['51995386439'] 
+global.suittag = ['55531983738317'] 
+global.prems = ['5531983738317'] 
 
-global.packname = '(☞ﾟ∀ﾟ)☞'
-global.author = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-global.wm = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-global.igfg = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
+global.packname = 'ata amo'
+global.author = 'LAST.FM GANG★'
+global.wm = 'LAST.FM GANG★'
+global.igfg = 'LAST.FM GANG★'
+global.wait = '*[❗] Carregando, calma tonho*'
 
 
-global.openai_key = 'sk-0'
+global.openai_key = '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'
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
 
-global.openai_org_id = 'org-3'
+global.openai_org_id = 'org-zqIRR2MXywdpbFcuKt0iEGCh'
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
 
@@ -95,85 +83,85 @@ let emot = {
       exp: '⚡ Experiencia',
       bank: '🏦 Banco',
       diamond: '💎 Diamante',
-      health: '❤️ Salud',
+      health: '❤️ Saúde',
       kyubi: '🌀 Magia',
       joincount: '🪙 Token',
       emerald: '💚 Esmeralda',
-      stamina: '✨ Energía',
-      role: '💪 Rango',
-      premium: '🎟️ Premium',
-      pointxp: '📧 Puntos Exp',
-      gold: '👑 Oro',
-      trash: '🗑 Basura',
+      stamina: '✨ Energia',
+      role: '💪 Cargp',
+      premium: '🎟️ VIP',
+      pointxp: '📧 Pontos Exp',
+      gold: '👑 Ouro',
+      trash: '🗑 Lixo',
       crystal: '🔮 Cristal',
-      intelligence: '🧠 Inteligencia',
-      string: '🕸️ Cuerda',
-      keygold: '🔑 Llave de Oro',
-      keyiron: '🗝️ Llave de Hierro',
-      emas: '🪅 Piñata',
-      fishingrod: '🎣 Caña de Pescar',
+      intelligence: '🧠 Inteligência',
+      string: '🕸️ Corda',
+      keygold: '🔑 CHAVE DE OURO',
+      keyiron: '🗝️ CHAVE DE FERRO',
+      emas: '🪅 Pinhata',
+      fishingrod: '🎣 Vara de pescar',
       gems: '🍀 Gemas',
-      magicwand: '⚕️ Varita Mágica',
-      mana: '🪄 Hechizo',
-      agility: '🤸‍♂️ Agilidad',
-      darkcrystal: '♠️ Cristal Oscuro',
-      iron: '⛓️ Hierro',
-      rock: '🪨 Roca',
-      potion: '🥤 Poción',
+      magicwand: '⚕️ Varinha Mágica',
+      mana: '🪄 Mana',
+      agility: '🤸‍♂️ Agilidade',
+      darkcrystal: '♠️ Cristal escuro',
+      iron: '⛓️ Ferro',
+      rock: '🪨 Rocha',
+      potion: '🥤 Poção',
       superior: '💼 Superior',
-      robo: '🚔 Robo',
-      upgrader: '🧰 Aumentar Mejora',
-      wood: '🪵 Madera',
-      strength: '🦹‍ ♀️ Fuerza',
+      robo: '🚔 Robô',
+      upgrader: '🧰 Upgrader',
+      wood: '🪵 Madeira',
+      strength: '🦹‍ ♀️ Força',
       arc: '🏹 Arco',
       armor: '🥼 Armadura',
       bow: '🏹 Super Arco',
-      pickaxe: '⛏️ Pico',
+      pickaxe: '⛏️ Picareta',
       sword: '⚔️ Espada',
-      common: '📦 Caja Común',
-      uncoommon: '🥡 Caja Poco Común',
-      mythic: '🗳️ Caja Mítico',
-      legendary: '🎁 Caja Legendaria',
-      petFood: '🍖 Alimento para Mascota',
-      pet: '🍱 Caja para Mascota',
-      bibitanggur: '🍇 Semilla de Uva',
-      bibitapel: '🍎 Semilla de Manzana',
-      bibitjeruk: '🍊 Semillas de naranja',
-      bibitmangga: '🥭 Semilla de Mango',
-      bibitpisang: '🍌 Semillas de Plátano',
-      ayam: '🐓 Pollo',
-      babi: '🐖 Puerco',
-      Jabali: '🐗 Jabali',
-      bull: '🐃 Toro',    
-      buaya: '🐊 Cocodrilo',    
+      common: '📦 Caixa Comum',
+      uncoommon: '🥡 Caixa Incomum',
+      mythic: '🗳️ Caixa Mítica',
+      legendary: '🎁 Caixa Lendária',
+      petFood: '🍖 Alimento para Mascotes',
+      pet: '🍱 Caixa de PET',
+      bibitanggur: '🍇 Sementes de Uva',
+      bibitapel: '🍎 Sementes de Maçã',
+      bibitjeruk: '🍊 Sementes de laranja',
+      bibitmangga: '🥭 Sementes de Manga',
+      bibitpisang: '🍌 Sementes de banana',
+      ayam: '🐓 Galinha',
+      babi: '🐖 Porco',
+      Jabali: '🐗 Javali',
+      bull: '🐃 Touro',    
+      buaya: '🐊 Crocodilo',    
       cat: '🐈 Gato',      
       centaur: '🐐 Centauro',
-      chicken: '🐓 Pollo',
+      chicken: '🐓 Galo',
       cow: '🐄 Vaca', 
-      dog: '🐕 Perro',
-      dragon: '🐉 Dragón',
+      dog: '🐕 Cachorro',
+      dragon: '🐉 Dragão',
       elephant: '🐘 Elefante',
-      fox: '🦊 Zorro',
-      giraffe: '🦒 Jirafa',
+      fox: '🦊 Raposa',
+      giraffe: '🦒 Girafa',
       griffin: '🦅 Ave',
-      horse: '🐎 Caballo',
+      horse: '🐎 Cavalo',
       kambing: '🐐 Cabra',
       kerbau: '🐃 Búfalo',
-      lion: '🦁 León',
-      money: '👾 MysticCoins',
-      monyet: '🐒 Mono',
+      lion: '🦁 Leão',
+      money: '👾 Artpopcoins',
+      monyet: '🐒 Macaco',
       panda: '🐼 Panda',
-      snake: '🐍 Serpiente',
+      snake: '🐍 Cobra',
       phonix: '🕊️ Fénix',
       rhinoceros: '🦏 Rinoceronte',
       wolf: '🐺 Lobo',
       tiger: '🐅 Tigre',
-      cumi: '🦑 Calamar',
-      udang: '🦐 Camarón',
-      ikan: '🐟 Pez',
-      fideos: '🍝 Fideos',
-      ramuan: '🧪 Ingrediente NOVA',
-      knife: '🔪 Cuchillo'
+      cumi: '🦑 Lula',
+      udang: '🦐 Camarão',
+      ikan: '🐟 Peixe',
+      fideos: '🍝 macarrão',
+      ramuan: '🧪 Ingrediente NOVO',
+      knife: '🔪 faca'
     }
 let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
 if (!results.length) return ''
@@ -276,73 +264,73 @@ global.rpgshop = { //Tienda
 emoticon(string) {
 string = string.toLowerCase()
     let emottt = {
-      exp: '⚡ Experiencia',
+      exp: '⚡ Experiência',
       limit: '💎 Diamante',
       diamond: '💎 Diamante',
       joincount: '🪙 Token',
       emerald: '💚 Esmeralda',
-      berlian: '♦️ Joya',
+      berlian: '♦️ Jóia',
       kyubi: '🌀 Magia',
       gold: '👑 Oro',
-      money: '👾 MysticCoins',
-      tiketcoin: '🎫 mystic Tickers',
-      stamina: '✨ Energía',
-      potion: '🥤 Poción',
+      money: '👾 ARTPOPCoins',
+      tiketcoin: '🎫 ARTPOP Tickers',
+      stamina: '✨ Energia',
+      potion: '🥤 Poção',
       aqua: '💧 Agua',
-      trash: '🗑 Basura',
-      wood: '🪵 Madera',
-      rock: '🪨 Roca',
-      batu: '🥌 Piedra',
-      string: '🕸️ Cuerda',
-      iron: '⛓️ Hierro',
-      coal: '⚱️ Carbón',
-      botol: '🍶 Botella',
+      trash: '🗑 Lixo',
+      wood: '🪵 Madeira',
+      rock: '🪨 Rocha',
+      batu: '🥌 Pedra',
+      string: '🕸️ Corda',
+      iron: '⛓️ Ferro',
+      coal: '⚱️ Carvão',
+      botol: '🍶 Garrafa',
       kaleng: '🥫 Lata',
-      kardus: '🪧 Cartón',
-      eleksirb: '💡 Electricidad',
-      emasbatang: '〽️ Barra de Oro',
-      emasbiasa: '🧭 Oro Común',
-      rubah: '🦊🌫️ Zorro Grande',
-      sampah: '🗑🌫️ Super Basura',
+      kardus: '🪧 Cartão',
+      eleksirb: '💡 Electricidade',
+      emasbatang: '〽️ Barra de Ouro',
+      emasbiasa: '🧭 Ouro Comum',
+      rubah: '🦊🌫️ Raposa Grande',
+      sampah: '🗑🌫️ Harrys House',
       serigala: '🐺🌫️ Super Lobo',
-      kayu: '🛷 Super Madera',
+      kayu: '🛷 Super Madeira',
       sword: '⚔️ Espada',
-      umpan: '🪱 Carnada', 
-      healtmonster: '💵 Billetes',
-      emas: '🪅 Piñata',
+      umpan: '🪱 isca', 
+      healtmonster: '💵 Bilhetes',
+      emas: '🪅 Pinhata',
       pancingan: '🪝 Gancho',
-      pancing: '🎣 Caña de Pescar',
-      common: '📦 Caja Común',
-      uncoommon: '🥡 Caja Poco Común',
-      mythic: '🗳️ Caja Mítica',
-      pet: '📫 Caja de Mascotas',//?
-      gardenboxs: '💐 Caja de Jardinería',//?
-      legendary: '🎁 Caja Legendaria',
+      pancing: '🎣 Vara de pesca',
+      common: '📦 Caixa comum',
+      uncoommon: '🥡 Caixa incomum',
+      mythic: '🗳️ Caixa mítica',
+      pet: '📫 Caixa de pets',//?
+      gardenboxs: '💐 Caixa de Jardinagem',//?
+      legendary: '🎁 Caixa lendária',
       anggur: '🍇 Uva',
-      apel: '🍎 Manzana',
-      jeruk: '🍊 Naranja',
-      mangga: '🥭 Mango',
-      pisang: '🍌 Platano',
-      bibitanggur: '🌾🍇 Semillas de uva',
-      bibitapel: '🌾🍎 Semillas de manzana',
-      bibitjeruk: '🌾🍊 Semillas de naranja',
-      bibitmangga: '🌾🥭 Semillas de Mango',
-      bibitpisang: '🌾🍌 Semillas de plátano',
+      apel: '🍎 Mançã',
+      jeruk: '🍊 Laranja',
+      mangga: '🥭 Manga',
+      pisang: '🍌 Banana',
+      bibitanggur: '🌾🍇 Sementes de uva',
+      bibitapel: '🌾🍎 Sementes de maçã',
+      bibitjeruk: '🌾🍊 Sementes de Laranja',
+      bibitmangga: '🌾🥭 Sementes de Manga',
+      bibitpisang: '🌾🍌 Sementes de banana',
       centaur: '🐐 Centauro',
       griffin: '🦅 Ave',
       kucing: '🐈 Gato',
-      naga: '🐉 Dragón',
-      fox: '🦊 Zorro',
-      kuda: '🐎 Caballo',
+      naga: '🐉 Dragão',
+      fox: '🦊 Raposa',
+      kuda: '🐎 Cavalo',
       phonix: '🕊️ Fénix',
       wolf: '🐺 Lobo',
-      anjing: '🐶 Perro',
-      petFood: '🍖 Alimento para Mascota', //?
+      anjing: '🐶 Cachorro',
+      petFood: '🍖 Alimento para Mascote', //?
       makanancentaur: '🐐🥩 Comida de Centauro',
       makanangriffin: '🦅🥩 Comida de Ave',
       makanankyubi: '🌀🥩 Comida Mágica',
-      makanannaga: '🐉🥩 Comida de Dragón',
-      makananpet: '🍱🥩 Alimentos de mascotas',
+      makanannaga: '🐉🥩 Comida de Dragão',
+      makananpet: '🍱🥩 Alimentos de pets',
       makananphonix: '🕊️🥩 Comida de Fénix'  
     }
 let results = Object.keys(emottt).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
@@ -442,11 +430,11 @@ global.mes = d.toLocaleDateString('es', { month: 'long' })
 global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 //*****************************
-global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝`
-global.gt = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-global.mysticbot = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'
-global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'
+global.wm2 = `▸ ${dia} ${fecha}\n▸ LAST.FM GANG BOT`
+global.gt = 'LAST.FM GANG BOT★'
+global.mysticbot = '★ LAST.FM GANG BOT'
+global.md = 'https://last.fm/user/caico_'
+global.mysticbot = 'https://last.fm/user/caico_'
 global.waitt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 global.waittt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 global.waitttt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
@@ -465,8 +453,8 @@ global.htki = '*⭑•̩̩͙⊱•••• ☪*'
 global.htka = '*☪ ••••̩̩͙⊰•⭑*'
 global.comienzo = '• • ◕◕════'
 global.fin = '════◕◕ • •'
-global.botdate = `⫹⫺ Date :  ${moment.tz('America/Los_Angeles').format('DD/MM/YY')}` //Asia/Jakarta
-global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('America/Los_Angeles').format('HH:mm:ss')}`//America/Los_Angeles
+global.botdate = `★ DATA:  ${moment.tz('America/Sao_Paulo').format('DD/MM/YY')}` //Asia/Jakarta
+global.bottime = `★ HORÁRIO: ${moment.tz('America/Sao_Paulo').format('HH:mm:ss')}`//America/Los_Angeles
 global.fgif = {key: { participant : '0@s.whatsapp.net'}, message: { "videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999',  'gifPlayback': 'true',  'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.png')}}}
 global.multiplier = 99
 //*************************

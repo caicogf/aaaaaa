@@ -1,17 +1,17 @@
 import translate from '@vitalets/google-translate-api'
 import fetch from "node-fetch"
 let handler = async (m, { text, command, args, usedPrefix }) => {
-  if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝚃𝙴𝚇𝚃𝙾 𝙿𝙰𝚁𝙰 𝙷𝙰𝙱𝙻𝙰𝚁 𝙲𝙾𝙽 𝚂𝙸𝙼𝚂𝙸𝙼𝙸 𝙾 𝙴𝙻 𝙱𝙾𝚃*\n\n*𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command} Hola bot*`
+  if (!text) throw `*[❗] MANDA UM TEXTO PARA FALAR COM O SIMSIMI*\n\n*EXEMPLO: ${usedPrefix + command} eai bot*`
   try {
-  let api = await fetch("https://api.simsimi.net/v2/?text=" + text + "&lc=es")
+  let api = await fetch("https://api.simsimi.net/v2/?text=" + text + "&lc=pt")
   let resSimi = await api.json()
   m.reply(resSimi.success)      
   } catch {
   try {
-  if (text.includes('Hola')) text = text.replace('Hola', 'Hello')
-  if (text.includes('hola')) text = text.replace('hola', 'Hello')
-  if (text.includes('HOLA')) text = text.replace('HOLA', 'HELLO')    
-  let reis = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=" + text)
+  if (text.includes('Oi')) text = text.replace('manda o papo')
+  if (text.includes('Oii')) text = text.replace('eai')
+  if (text.includes('quem é você')) text = text.replace('sou a cachorra da sua mãe')    
+  let reis = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ed&dt=t&q=" + text)
   let resu = await reis.json()  
   let nama = m.pushName || '1'
   let api = await fetch("http://api.brainshop.ai/get?bid=153868&key=rcKonOgrUFmn5usX&uid=" + nama + "&msg=" + resu[0][0][0])
@@ -25,11 +25,11 @@ let handler = async (m, { text, command, args, usedPrefix }) => {
   let res222 = await fetch(`https://violetics.pw/api/utility/simsimi?apikey=beta&text=${resuuu[0][0][0]}`)  
   let json222 = await res222.json()
   let resulttt = json222.result
-  let lolll = await translate(`${resulttt}`, { to: 'es', autoCorrect: true })
+  let lolll = await translate(`${resulttt}`, { to: 'pt', autoCorrect: true })
   m.reply(lolll.text)      
   }}
 }
-handler.help = ['simi', 'bot'].map(v => v + ' <teks>')
+handler.help = ['simi', 'bot'].map(v => v + ' <texto>')
 handler.tags = ['fun']
 handler.command = /^((sim)?simi|bot|alexa|cortana)$/i
 export default handler

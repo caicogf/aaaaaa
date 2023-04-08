@@ -2,7 +2,7 @@ import yts from 'yt-search'
 import fs from 'fs'
 
 let handler = async (m, {conn, text }) => {
-  if (!text) throw '⚠️ *_Que quieres que busque en YouTube?_*'
+  if (!text) throw '⚠️ *_O que você quer que eu busce no YouTube?_*'
   await conn.reply(m.chat, global.wait, m)
   let results = await yts(text)
   let tes = results.all
@@ -11,9 +11,9 @@ let handler = async (m, {conn, text }) => {
       case 'video': return `
 ° *_${v.title}_*
 ↳ 🫐 *_Link :_* ${v.url}
-↳ 🕒 *_Duración :_* ${v.timestamp}
-↳ 📥 *_Subido :_* ${v.ago}
-↳ 👁 *_Vistas :_* ${v.views}`}}).filter(v => v).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n')
+↳ 🕒 *_DURAÇÃO :_* ${v.timestamp}
+↳ 📥 *_LANÇADO:_* ${v.ago}
+↳ 👁 *_VIEWS:_* ${v.views}`}}).filter(v => v).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n')
   conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m)
 }
 handler.help = ['ytsearch *<texto>*'] 

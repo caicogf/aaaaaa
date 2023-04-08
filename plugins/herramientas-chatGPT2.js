@@ -33,7 +33,7 @@ m.reply(BotIA222.data.choices[0].text.trim())
 } catch (efe2) {
 console.log(efe2)    
 try {
-let IA = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`)  
+let IA = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_pt=${m.sender}`)  
 let IAR = await IA.json()
 conn.sendMessage(m.chat, { text: `${IAR.response}`.trim() }, { quoted: m });
 } catch (efe) {
