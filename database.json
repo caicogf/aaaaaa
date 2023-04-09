@@ -529,7 +529,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 378,
+      "exp": 452,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -2692,6 +2692,29 @@
       "modoadmin": false,
       "simi": false,
       "expired": 0
+    },
+    "status@broadcast": {
+      "isBanned": false,
+      "welcome": true,
+      "detect": true,
+      "sWelcome": "",
+      "sBye": "",
+      "sPromote": "",
+      "sDemote": "",
+      "delete": true,
+      "modohorny": true,
+      "autosticker": false,
+      "audios": true,
+      "antiLink": false,
+      "antiLink2": false,
+      "antiviewonce": false,
+      "antiToxic": false,
+      "antiTraba": false,
+      "antiArab": false,
+      "antiporno": false,
+      "modoadmin": false,
+      "simi": false,
+      "expired": 0
     }
   },
   "stats": {
@@ -2742,6 +2765,12 @@
       "success": 2,
       "last": 1680975803242,
       "lastSuccess": 1680975803242
+    },
+    "sticker-sticker.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1681058133639,
+      "lastSuccess": 1681058133639
     }
   },
   "msgs": {},
